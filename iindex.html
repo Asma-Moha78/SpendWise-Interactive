@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpendWise | Smart Budgeting</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="brand">Spend<span>Wise</span></a>
+    <span class="tagline">Your money, under control.</span>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">PERSONAL FINANCE DASHBOARD</p>
+        <h1>Take control of your money.</h1>
+        <p>Track your spending, manage your budget, and build better habits.</p>
+      </div>
+      <div class="date-card">
+        <span>Today's date</span>
+        <strong id="today"></strong>
+      </div>
+    </section>
+
+    <section class="panel budget-panel">
+      <div>
+        <h2>Monthly budget</h2>
+        <p>Set the amount you plan to spend this month.</p>
+      </div>
+      <form id="budget-form" class="budget-form">
+        <label for="budget">Budget (KSh)</label>
+        <div class="input-row">
+          <input type="number" id="budget" min="0.01"
+            step="0.01" value="5000" required>
+          <button type="submit">Update budget</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="summary-grid" aria-label="Budget summary">
+      <article class="summary-card">
+        <span>Total budget</span>
+        <strong id="total-budget">KSh 5,000.00</strong>
+        <small>Your monthly spending limit</small>
+      </article>
+      <article class="summary-card">
+        <span>Total expenses</span>
+        <strong id="total-expenses">KSh 0.00</strong>
+        <small>All recorded expenses</small>
+      </article>
+      <article class="summary-card">
+        <span>Remaining balance</span>
+        <strong id="remaining">KSh 5,000.00</strong>
+        <small>Budget minus expenses</small>
+      </article>
+    </section>
+
+    <section class="panel status-panel" aria-live="polite">
+      <div class="status-icon" id="status-icon">✓</div>
+      <div>
+        <h2 id="status-title">You're on track!</h2>
+        <p id="status-message">Add an expense to see your budget status.</p>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <section class="panel">
+        <h2>Add an expense</h2>
+        <p class="muted">Record a purchase or payment below.</p>
+
+        <form id="expense-form">
+          <label for="description">Expense description</label>
+          <input type="text" id="description"
+            placeholder="e.g. Groceries" maxlength="60" required>
+
+          <label for="category">Category</label>
+          <select id="category" required>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Bills">Bills</option>
+            <option value="Education">Education</option>
+            <option value="Health">Health</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="amount">Amount (KSh)</label>
+          <input type="number" id="amount" min="0.01"
+            step="0.01" placeholder="0.00" required>
+
+          <button type="submit" class="primary-button">
+            + Add expense
+          </button>
+          <p id="form-message" class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="panel expenses-panel">
+        <div class="section-heading">
+          <div>
+            <h2>Recent expenses</h2>
+            <p class="muted">Your recorded transactions</p>
+          </div>
+          <span id="expense-count" class="count-badge">0 records</span>
+        </div>
+
+        <div id="expense-list" class="expense-list">
+          <p class="empty-state">No expenses yet. Add your first expense!</p>
+        </div>
+
+        <button type="button" id="clear-expenses" class="secondary-button">
+          Clear all expenses
+        </button>
+      </section>
+    </section>
+
+    <footer>
+      <p>SpendWise &copy; 2026 | Spend mindfully. Save consistently.</p>
+    </footer>
+  </main>
+</body>
+</html>
