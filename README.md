@@ -1,22 +1,38 @@
 SpendWise – Interactive Budgeting Application
 Project Overview
 
-SpendWise is a personal budgeting application built using HTML, CSS, and JavaScript. It helps users manage their finances by setting a budget, recording expenses, tracking spending, and viewing their remaining balance.
+SpendWise is a personal budgeting application developed using HTML, CSS, and JavaScript. It helps users manage their finances by setting a budget, recording expenses, tracking spending, and viewing their remaining balance.
 
 The application provides an interactive dashboard that updates automatically whenever users add or delete expenses.
 
-Improvements Made This Week
+Features
+Set and update a monthly budget.
+Record expenses with descriptions and categories.
+View total budget, total expenses, and remaining balance.
+Receive alerts when spending approaches or exceeds the budget.
+Delete individual expenses.
+Clear all recorded expenses.
+Validate expense inputs.
+Save budget and expense records using browser localStorage.
+Responsive design for mobile devices and desktop computers.
+Technologies Used
+HTML5: Provides the structure of the application.
+CSS3: Handles styling and responsive layouts.
+JavaScript: Implements application functionality and interactivity.
+DOM Manipulation: Updates webpage content dynamically.
+Browser localStorage: Stores budget and expense information.
+Git and GitHub: Version control and project hosting.
+Netlify: Website deployment and hosting.
+GitHub Repository Information
 
-The following improvements were made to SpendWise:
+Project Name: SpendWise
 
-Added an interactive form for recording expenses.
-Added expense categories such as Food, Transport, Shopping, Bills, and Education.
-Created dashboard cards displaying the total budget, total expenses, and remaining balance.
-Added automatic budget alerts when spending approaches or exceeds the budget.
-Implemented functionality to delete individual expenses and clear all expenses.
-Added input validation to prevent invalid expense amounts.
-Made the dashboard responsive for mobile devices and desktop computers.
-Used browser localStorage to save expense records and budget information between page refreshes.
+Repository: https://github.com/YOUR-USERNAME/SpendWise
+
+Live Netlify Website
+
+Website URL: To be added after successful Netlify deployment.
+
 How Conditionals Are Used
 
 Conditional statements (if, else if, and else) are used to make decisions based on the user's spending.
@@ -31,15 +47,15 @@ An array named expenses stores multiple expense records. Each expense is represe
 
 The push() method adds new expense records to the array. The findIndex() method locates an expense, while splice() removes an expense from the array.
 
-Using an array makes it easier to manage multiple transactions without creating separate variables for each expense.
+Using an array makes it easier to manage multiple transactions.
 
 How Loops Are Used
 
 Loops process the expense records stored in the array.
 
-A for loop calculates the total amount spent by adding the amounts of all recorded expenses. Another loop displays the expense records on the dashboard.
+A for loop calculates the total amount spent by adding the amounts of all recorded expenses. Another loop displays expense records on the dashboard.
 
-Loops make the application more efficient because the same instructions can process multiple expense records automatically.
+Loops allow the application to process multiple expense records automatically.
 
 How the DOM Is Updated
 
@@ -47,58 +63,77 @@ The Document Object Model (DOM) allows JavaScript to update the webpage dynamica
 
 The application uses methods and properties such as:
 
-document.getElementById() to select HTML elements by their IDs.
-document.querySelector() to select elements using CSS selectors.
-textContent to update the text displayed on the dashboard.
-document.createElement() to create new expense elements.
-appendChild() to add expense elements to the webpage.
-replaceChildren() to refresh the displayed expense list.
+document.getElementById()
+document.querySelector()
+textContent
+document.createElement()
+appendChild()
+replaceChildren()
 
-Whenever an expense is added or deleted, the dashboard recalculates the totals and updates the remaining balance and budget status without requiring a page reload.
+Whenever an expense is added or deleted, the dashboard recalculates totals and updates the remaining balance and budget status without requiring a page reload.
 
 How User Interactions Are Handled Through Events
 
 Event listeners allow users to interact with the application.
 
-The addEventListener() method is used to respond to the following actions:
+The addEventListener() method responds to:
 
-Expense form submission: Validates user input and adds a new expense.
-Budget form submission: Updates the monthly budget.
-Delete button clicks: Removes a selected expense.
-Clear All button clicks: Requests confirmation before deleting all expense records.
+Expense form submission.
+Budget form submission.
+Delete button clicks.
+Clear All button clicks.
 
-The preventDefault() method prevents form submissions from reloading the webpage, allowing JavaScript to process the information and update the dashboard dynamically.
+The preventDefault() method prevents form submissions from reloading the webpage, allowing JavaScript to process information and update the dashboard dynamically.
 
+Deployment Process Summary
+
+SpendWise is deployed using GitHub and Netlify.
+
+The deployment process involves:
+
+Organizing the project files.
+Uploading the project to a public GitHub repository.
+Connecting the GitHub repository to Netlify.
+Configuring the deployment settings.
+Publishing the website using Netlify.
+Customizing the Netlify website name.
+Testing the live application.
+Updating the project and pushing changes to GitHub.
+Verifying that Netlify automatically deploys the latest changes.
 Challenges Encountered and Solutions
+Validating User Input
 
-Some common challenges when developing an interactive budgeting application include:
+Invalid or empty expense amounts can cause incorrect calculations. Conditional statements and HTML form validation help ensure that descriptions are provided and amounts are greater than zero.
 
-1. Validating user input
+Keeping Dashboard Totals Accurate
 
-Invalid or empty expense amounts can cause incorrect calculations. Conditional statements and HTML form validation are used to ensure that descriptions are provided and amounts are greater than zero.
+Adding or deleting expenses changes total spending. The application recalculates totals whenever the expense data changes.
 
-2. Keeping the dashboard totals accurate
+Updating Dynamically Created Elements
 
-Adding or deleting expenses changes the total spending. The application recalculates totals from the expenses array whenever the data changes.
+Delete buttons are created dynamically alongside expense records. Event delegation allows the expense list to handle clicks on these buttons.
 
-3. Updating dynamically created elements
+Preserving Data After Refreshing
 
-Delete buttons are created dynamically alongside expense records. Event delegation allows the expense list to handle clicks on these buttons, including buttons added after the page loads.
+JavaScript variables normally reset when a webpage reloads. Browser localStorage is used to save and restore expense records and the budget.
 
-4. Preserving data after refreshing the page
+Deployment Challenges
 
-Normally, JavaScript variables reset when a webpage reloads. Browser localStorage is used to save and restore expense records and the budget.
+Deployment may involve configuring the correct publishing directory, ensuring that the homepage is correctly named, and checking that all CSS, JavaScript, and image files load correctly.
 
-Update this section to reflect the specific challenges you encountered and the solutions you implemented while working on the project.
+Lessons Learned
 
-Technologies Used
-HTML5 – webpage structure and forms.
-CSS3 – styling and responsive layouts.
-JavaScript – application logic and interactivity.
-DOM Manipulation – dynamic webpage updates.
-Browser localStorage – saving budget and expense data.
-Git and GitHub – version control and project hosting.
-How to Run the Project
+Through this project, I learned:
+
+How to build an interactive budgeting application using JavaScript.
+How to use arrays, loops, and conditional statements.
+How to manipulate the DOM and handle user events.
+How to store application data using localStorage.
+How to create and manage GitHub repositories.
+How to deploy a website using Netlify.
+How continuous deployment works.
+How to test and troubleshoot a live website.
+How to Run the Project Locally
 Clone or download the project repository.
 Open the project folder.
 Open index.html in a modern web browser.
@@ -112,5 +147,6 @@ Conclusion
 
 SpendWise demonstrates how JavaScript can make a webpage interactive by combining conditional statements, arrays, loops, DOM manipulation, and event listeners.
 
-The application enables users to record expenses, monitor their spending, and receive feedback about their budget status.
+The application helps users record expenses, monitor their spending, and receive feedback about their budget status.
 
+The project is being published using GitHub and Netlify to make it accessible online.
