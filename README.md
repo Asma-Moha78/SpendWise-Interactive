@@ -27,11 +27,9 @@ GitHub Repository Information
 
 Project Name: SpendWise
 
-Repository: https://github.com/YOUR-USERNAME/SpendWise
+Repository: https://github.com/Asma-Moha78/SpendWise-Interactive
 
-Live Netlify Website: https://my-spendwise-tracker.netlify.app/
-
-Website URL: To be added after successful Netlify deployment.
+Website URL: https://my-spendwise-tracker.netlify.app/
 
 How Conditionals Are Used
 
